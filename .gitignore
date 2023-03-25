@@ -1,0 +1,6 @@
+build/
+tags
+po/*.po~
+builddir/
+__pycache__/
+_build/
