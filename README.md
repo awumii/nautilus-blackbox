@@ -12,12 +12,22 @@ To install Nautilus Black Box, you will need to have the following packages inst
  - nautilus-python
 
 Once you have these dependencies installed, follow these steps to build and install the extension:
-
+  
+Clone the repository:
 ```bash
 git clone https://github.com/awumii/nautilus-blackbox.git
 cd nautilus-blackbox
+```
+
+Install the extension using meson and ninja:
+```bash
 meson setup builddir
 sudo ninja -C builddir install
+```
+
+If you are using Arch Linux, it's prefered to use this command instead:
+```bash
+makepkg -si
 ```
 
 Restart Nautilus:
