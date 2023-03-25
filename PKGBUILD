@@ -17,12 +17,12 @@ pkgver() {
 }
 
 build() {
-  cd "$srcdir/$pkgname-$pkgver"
-  meson setup builddir --prefix=/usr
+  cd "$srcdir/$pkgname"
+  meson setup builddir
   ninja -C builddir
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "$srcdir/$pkgname"
   DESTDIR="$pkgdir" ninja -C builddir install
 }
